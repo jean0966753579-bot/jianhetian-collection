@@ -307,6 +307,7 @@ a {
 }
 
 .post-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid rgba(216, 210, 194, 0.9);
   border-radius: 8px;
@@ -426,6 +427,7 @@ a {
 }
 
 .item-content {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -492,6 +494,113 @@ code {
   color: var(--jade-deep);
 }
 
+.edit-item-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 12px;
+  background: rgba(255, 253, 248, 0.94);
+  color: var(--lacquer);
+  box-shadow: 0 8px 18px rgba(31, 34, 30, 0.16);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.item-content > .edit-item-button {
+  top: 18px;
+  right: 18px;
+}
+
+.edit-dialog[hidden] {
+  display: none;
+}
+
+.edit-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.edit-dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 24, 22, 0.48);
+}
+
+.edit-dialog-panel {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+  max-height: min(88vh, 760px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(20px, 4vw, 30px);
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(23, 24, 22, 0.26);
+}
+
+.edit-dialog-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.edit-dialog-heading h2 {
+  margin: 4px 0 0;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.edit-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.edit-fields label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.edit-fields input,
+.edit-fields textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.edit-note {
+  margin: 16px 0;
+  color: var(--muted);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-size: 0.9rem;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
 @media (max-width: 760px) {
   .site-header {
     min-height: auto;
@@ -538,5 +647,13 @@ code {
   .meta-list div {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .edit-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-actions {
+    display: grid;
   }
 }
