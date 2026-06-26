@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="jade">
+  <rect width="64" height="64" rx="12" fill="#171816"/>
+  <path d="M32 9 53 26 43 55H21L11 26 32 9Z" fill="#a7bfa7"/>
+  <path d="M32 9 43 55H21L11 26 32 9Z" fill="#dfe8dd" opacity=".62"/>
+  <path d="M18 28 32 15 46 28 38 49H26L18 28Z" fill="none" stroke="#4b6f60" stroke-width="3" stroke-linejoin="round"/>
+</svg>

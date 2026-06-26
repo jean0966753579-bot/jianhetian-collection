@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>簡禾田收藏小天地</title>
+    <meta name="description" content="整理和田玉與個人收藏照片、故事、尺寸與來源的私人收藏網站。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">簡禾田收藏小天地</a>
+      <nav class="nav" aria-label="主要導覽">
+        <a href="#collection">收藏</a>
+        <a href="#upload">上傳照片</a>
+        <a href="#about">關於</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="和田玉收藏首頁">
+        <img src="assets/hero-hetian-jade.png" alt="溫潤玉石收藏特寫" class="hero-image">
+        <div class="hero-copy">
+          <p class="kicker">私人收藏記錄</p>
+          <h1>簡禾田收藏小天地</h1>
+          <p>把每一件收藏的照片、來歷、尺寸與心得好好保存，慢慢累積成自己的小型藏品圖錄。</p>
+        </div>
+      </section>
+
+      <section class="intro" id="about">
+        <div>
+          <p class="section-label">收藏筆記</p>
+          <h2>一張照片，一段入手時的記憶。</h2>
+        </div>
+        <p>
+          這裡可以整理和田玉、文玩與其他珍藏。每件作品都能記錄名稱、類別、材質、尺寸、入手日期與故事，
+          之後回看時，不只看到物件，也看得到當時選中它的理由。
+        </p>
+      </section>
+
+      <section class="upload-panel" id="upload">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">新增收藏</p>
+            <h2>上傳收藏照片</h2>
+          </div>
+          <button class="text-button" type="button" id="clearUploads">清除本機暫存</button>
+        </div>
+
+        <form class="upload-form" id="uploadForm">
+          <label class="photo-drop" for="photoInput">
+            <input id="photoInput" name="photo" type="file" accept="image/*" required>
+            <span class="photo-drop-title">選擇照片</span>
+            <span class="photo-drop-hint">支援 JPG、PNG、WebP；照片會先存於此瀏覽器。</span>
+          </label>
+
+          <div class="form-fields">
+            <label>
+              <span>收藏名稱</span>
+              <input name="title" type="text" placeholder="例：和田玉平安扣" required>
+            </label>
+            <label>
+              <span>類別</span>
+              <input name="category" type="text" placeholder="例：和田玉、手串、擺件">
+            </label>
+            <label>
+              <span>材質</span>
+              <input name="material" type="text" placeholder="例：白玉、青玉、籽料">
+            </label>
+            <label>
+              <span>入手日期</span>
+              <input name="date" type="date">
+            </label>
+            <label class="wide-field">
+              <span>備註</span>
+              <textarea name="note" rows="4" placeholder="記下來源、尺寸、價格、故事或鑑賞心得。"></textarea>
+            </label>
+            <button class="primary-button" type="submit">加入收藏</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="collection" id="collection">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">收藏圖錄</p>
+            <h2>我的收藏</h2>
+          </div>
+        </div>
+
+        <div class="post-grid" id="uploadedGrid" aria-live="polite"></div>
+
+        <div class="post-grid">
+          <article class="post-card">
+            <a href="items/no-025-yaochan-wanguan.html" aria-label="查看 No.025 腰纏萬貫">
+              <div class="post-media">
+                <img src="assets/items/25-0.jpg" alt="No.025 腰纏萬貫青花籽料巧雕">
+              </div>
+              <div class="post-body">
+                <p class="post-date">No.025</p>
+                <h3>腰纏萬貫</h3>
+                <p>青花籽料，三色籽料巧雕，工藝與料子都不错。</p>
+                <dl class="quick-facts">
+                  <div>
+                    <dt>克重</dt>
+                    <dd>130 g</dd>
+                  </div>
+                  <div>
+                    <dt>尺寸</dt>
+                    <dd>40/81/26 mm</dd>
+                  </div>
+                </dl>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card">
+            <a href="items/example-hetian-jade.html" aria-label="查看和田玉範例收藏">
+              <div class="post-media placeholder-media">
+                <span>範例照片位置</span>
+              </div>
+              <div class="post-body">
+                <p class="post-date">範例</p>
+                <h3>和田玉收藏範例</h3>
+                <p>這是一張可替換的收藏卡片。上傳照片後，新的收藏會出現在這個區域上方。</p>
+                <dl class="quick-facts">
+                  <div>
+                    <dt>類別</dt>
+                    <dd>和田玉</dd>
+                  </div>
+                  <div>
+                    <dt>材質</dt>
+                    <dd>待補充</dd>
+                  </div>
+                </dl>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>照片目前會保存在瀏覽器本機暫存。若要做成永久網站資料，可把照片放入 <code>assets/items/</code> 再建立正式頁面。</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
