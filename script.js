@@ -232,7 +232,12 @@ const renderUploads = () => {
           </div>
         </dl>
       </div>
+      <button class="delete-upload-button" type="button" aria-label="刪除 ${escapeHtml(item.title)} 暫存">刪除</button>
     `;
+    article.querySelector(".delete-upload-button")?.addEventListener("click", () => {
+      saveUploads(readUploads().filter((upload) => upload.id !== item.id));
+      renderUploads();
+    });
     uploadedGrid.prepend(article);
   });
 };
