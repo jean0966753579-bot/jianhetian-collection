@@ -128,6 +128,21 @@ const catalog = {
     story:
       "新疆和闐籽料「青玉獾」。早期作品，型制古樸十分有味，皮殼包漿漂亮，整體品項完整。獾音同歡，取其吉意。「提油」用意於摹古及顯色，使用純天然原料；一般經過提油的玉器，都會較光澤油潤。尺寸 42.3*22*22 mm，含繩約 28.6 克。",
   },
+  "no-027-qing-bai-yu-yu-pei-shi": {
+    title: "青白玉魚佩飾",
+    number: "No.027",
+    image: "assets/items/027-0.jpg",
+    detailImage: "../assets/items/027-0.jpg",
+    summary: "早期青白玉魚佩飾，玉魚雕得靈動悠遊，皮殼及包漿老味十足，油潤可愛。",
+    category: "和田玉",
+    material: "青白玉",
+    weight: "未記錄",
+    size: "96*25*7.5 mm",
+    craft: "魚形佩飾雕件",
+    note: "參考年代：早期；雕工佳，品相完整",
+    story:
+      "青白玉魚佩飾。此玉魚雕得非常靈動悠遊，皮殼及包漿老味十足，超 Q 油潤，雕工讚，品相完整。參考年代為早期，尺寸長 96 mm、寬 25 mm、厚 7.5 mm。",
+  },
 };
 
 const readJson = (key, fallback) => {
