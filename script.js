@@ -218,6 +218,21 @@ const catalog = {
     story:
       "新疆和田玉籽料「年年有餘」。青白玉棗紅皮，老熟玉質細膩油潤，獨籽雕刻，開門皮孔色根清晰，皮色保真。作品以純手工巧雕魚與蓮蓬，題意年年有餘。重 42 克。",
   },
+  "no-047-xi-shang-mei-shao": {
+    title: "喜上眉梢",
+    number: "No.047",
+    image: "assets/items/047-0.jpg",
+    detailImage: "../assets/items/047-0.jpg",
+    summary: "新疆和田玉籽料青白玉，獨籽滿工立體鏤空雕，開門黑紅皮色。",
+    category: "和田玉",
+    material: "新疆和田玉籽料，青白玉",
+    weight: "33 g",
+    size: "42*36*21 mm",
+    craft: "獨籽滿工立體鏤空雕",
+    note: "開門黑紅皮色，老熟料玉質溫潤油性十足",
+    story:
+      "新疆和田玉籽料「喜上眉梢」。青白玉，獨籽滿工立體鏤空雕，開門黑紅皮色。老熟料玉質溫潤，油性十足，題意喜上眉梢、春風滿面。尺寸 42*36*21 mm，重 33 克。",
+  },
 };
 
 const readJson = (key, fallback) => {
