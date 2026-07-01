@@ -475,6 +475,41 @@ a {
   color: #464d47;
 }
 
+.photo-gallery {
+  margin-top: 42px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 18px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(216, 210, 194, 0.9);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #dfe8dd;
+}
+
+.gallery-grid figcaption {
+  padding: 10px 12px 12px;
+  color: var(--muted);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 .site-footer {
   padding: 28px 5vw;
   border-top: 1px solid var(--line);
